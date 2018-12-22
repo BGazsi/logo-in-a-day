@@ -1,0 +1,19 @@
+.member {
+  &-name {
+    @extend .underline;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-down(sm) {
+      margin: 15px auto;
+    }
+  }
+
+  &-text {
+    width: 175px;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}

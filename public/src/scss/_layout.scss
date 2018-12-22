@@ -1,0 +1,38 @@
+.black {
+  background-color: $dark-grey;
+  color: $white;
+}
+
+.white {
+  background-color: $white;
+}
+
+.header {
+  @include media-breakpoint-up(md) {
+    height: 600px;
+  }
+
+  &-logo {
+    margin: auto;
+    display: block;
+  }
+
+  .contact-text {
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 30px;
+  }
+}
+
+.contact {
+  &-text {
+    display: flex;
+    align-items: baseline;
+    color: $grey;
+  }
+
+  &-logo {
+    width: 65px;
+    padding: 0 10px;
+  }
+}

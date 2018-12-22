@@ -1,0 +1,24 @@
+.slide {
+  padding: 50px 0;
+  position: relative;
+  min-height: 300px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-subtitle {
+    margin-bottom: 60px;
+  }
+
+  &-quote {
+    font-family: 'Playfair Display', Arial, serif;
+    font-style: italic;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+  }
+}

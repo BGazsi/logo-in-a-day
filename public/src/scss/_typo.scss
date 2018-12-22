@@ -1,0 +1,31 @@
+body {
+  font-family: 'Work Sans', Arial, serif;
+  font-weight: 300;
+  font-size: 12px;
+  background-color: $dark-grey;
+}
+
+.strikethrough {
+  position: relative;
+  color: $light-grey;
+
+  &::after {
+    border-bottom: 1px solid $light-grey;
+    content: '';
+    left: 0;
+    margin-top: 4px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+}
+
+.underline {
+  display: block;
+  height: 50px;
+  width: 50px;
+  font-weight: bold;
+  font-size: 22px;
+  border-bottom: 1px solid $white;
+  margin-bottom: 15px;
+}

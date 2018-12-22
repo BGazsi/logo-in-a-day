@@ -1,0 +1,19 @@
+.introduction {
+  font-size: 14px;
+  line-height: 21px;
+
+  &-box {
+    margin: 0 auto;
+
+    @include media-breakpoint-up(lg) {
+      margin: -90px 0 0 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &-text {
+      width: 280px;
+      margin-top: 145px;
+    }
+  }
+}

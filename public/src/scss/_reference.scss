@@ -1,0 +1,12 @@
+.reference {
+  padding: calc(15px / 2);
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+
+    &:nth-child(odd) {
+      text-align: right;
+    }
+  }
+}

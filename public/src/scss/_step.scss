@@ -1,0 +1,13 @@
+.step {
+  text-align: center;
+
+  &-number {
+    @extend .underline;
+    margin: 15px auto;
+  }
+
+  &-description {
+    width: 175px;
+    margin: 0 auto;
+  }
+}

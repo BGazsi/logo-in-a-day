@@ -1,0 +1,80 @@
+.page-view {
+  height: 600px;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-view .project {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-view .project:nth-child(1) {
+  z-index: 30;
+}
+
+@-webkit-keyframes mask-play {
+  from {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes mask-play {
+  from {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+.header .page-view {
+  background: url(../img/sprite.png) no-repeat -9999px -9999px;
+}
+
+.header .page-view .project:nth-child(1) {
+  background-image: url(../img/hero-1.png);
+}
+
+.header .page-view .project:nth-child(2) {
+  background-image: url(../img/hero-2.png);
+}
+
+.header .page-view .project:nth-child(3) {
+  background-image: url(../img/hero-3.png);
+}
+
+.header .page-view .project:nth-child(4) {
+  background-image: url(../img/hero-4.png);
+}
+
+.header .page-view .project.hide {
+  -webkit-mask: url(../img/sprite.png);
+  mask: url(../img/sprite.png);
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  -webkit-animation: mask-play 1.4s steps(70) forwards;
+  animation: mask-play 1.4s steps(70) forwards;
+}
+
+/* Fallback */
+.no-cssmask .page-view .project.hide {
+  opacity: 0;
+  -webkit-transition: opacity 1.4s ease;
+  transition: opacity 1.4s ease;
+  -webkit-mask: none !important;
+  mask: none !important;
+}

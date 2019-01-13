@@ -81,7 +81,6 @@ var Core;
 })(Core || (Core = {}));
 document.addEventListener('DOMContentLoaded', function () {
   var imgLoad0 = imagesLoaded( '.page-view', { background: true }, function() {
-    console.log('page-view loaded');
   });
   imgLoad0.on( 'done', function() {
     new Core.Slider();

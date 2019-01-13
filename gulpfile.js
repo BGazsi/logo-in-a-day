@@ -18,6 +18,7 @@ function watch () {
   gulp.watch('./public/src/scss/**/*.scss', styles)
   gulp.watch('./public/src/img/**/*', img)
   gulp.watch('./public/src/js/**/*.js', js)
+  gulp.watch('./public/src/pdf/**/*.pdf', pdf)
 }
 
 function js  () {
@@ -39,11 +40,19 @@ function img () {
     .pipe(gulp.dest('./public/dist/img/'))
 }
 
+function pdf () {
+  const pdfs = './public/src/pdf/**/*'
+
+  return gulp.src([pdfs])
+    .pipe(gulp.dest('./public/dist/pdf/'))
+}
+
 exports.watch = watch
 exports.styles = styles
 exports.js = js
 exports.img = img
+exports.pdf = pdf
 
-const build = gulp.series(gulp.parallel(styles, img, js))
+const build = gulp.series(gulp.parallel(styles, img, js, pdf))
 gulp.task('default', build)
 
